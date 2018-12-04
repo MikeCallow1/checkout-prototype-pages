@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout Prototype</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <a href="https://www.vashi.com/">
+                <img id="headerLogo" src="https://www.vashi.com/skin/frontend/default/vashi/images/logo.svg" alt="Vashi">
+            </a>
+        </header>
+        <div id="checkout">
+            <section class="basket">
+                <h1 class="basket__title">Basket</h1>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="https://www.vashi.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/p/r/prong-round-main_sv-rn02382_platinum.1524277681.jpg" />
+                    </div>
+                    <h2 class="item__name">
+                        Milgrain Diamond Ring
+                    </h2>
+                    <div class="item__price">
+                        <span class="price">£1,287</span>
+                    </div>
+                    <div class="item__attributes">
+                        <span class="item__attribute-key">Ring size:</span>
+                        <span class="item__attribute-value">M</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="https://www.vashi.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/p/r/prong-round-main_sv-rn02382_platinum.1524277681.jpg" />
+                    </div>
+                    <h2 class="item__name">
+                        Milgrain Diamond Ring
+                    </h2>
+                    <div class="item__price">
+                        <span class="price">£1,287</span>
+                    </div>
+                    <div class="item__attributes">
+                        <span class="item__attribute-key">Ring size:</span>
+                        <span class="item__attribute-value">M</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="login">
+                <form>
+                    <label class="required" for="email">Email Address<em>*</em></label>
+                    <div class="input-box input-email">
+                        <input placeholder="Email address" type="email" name="billing[email]" title="Please enter your e-mail address so we can confirm your order" id="billing:email" value="" class="vashi-input validate-email required-entry input-text">
+                        <input class="button" type="submit" value="Continue">
+                    </div>
+                </form>
+            </section>
+
+            <section class="address address--billing address--disabled" tabindex="-1">
+                <h1 class="address__title">Billing Address</h1>
+                <!-- Billing Address Form -->
+                <form>
+                    <div class="address__field-group">
+                        <div class="form-group">
+                            <label class="required" for="billing:first">First Name<em>*</em></label>
+                            <div class="input-box input-firstname">
+                                <input placeholder="First Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="billing[firstname]" id="billing:firstname" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="billing:lastname">Last Name<em>*</em></label>
+                            <div class="input-box input-lastname">
+                                <input placeholder="Last Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="billing[lastname]" id="billing:lastname" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="billing:telephone">Telephone<em>*</em></label>
+                            <div class="input-box input-telephone">
+                                <input placeholder="Telephone" type="tel" name="billing[telephone]" title="Please enter a phone number that we can contact you on, in case anything changes with your order" value="" class="vashi-input required-entry input-text" id="billing:telephone">
+                            </div>
+                        </div>
+                        <div class="form-group address-detail required">
+                            <label class="required" for="billing:street1">Address Line 1<em>*</em></label>
+                            <div class="input-box input-address-short">
+                                <input placeholder="Enter the first line of your billing address" type="text" title="Please enter the first line of your address" name="billing[street][]" id="billing:street1" value="" class="required-entry input-text vashi-input onestepcheckout-address-line" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="address__toggle">
+                            <div class="input-box input-different-shipping">
+                                <input type="radio" name="billing[use_for_shipping]" class="vashi-input different_shipping" id="billing:use_for_shipping_yes" value="1" checked="checked">
+                                <label for="billing:use_for_shipping_yes">Same as billing address above</label>
+                            </div>
+                            <div class="input-box input-different-shipping">
+                                <input type="radio" name="billing[use_for_shipping]" class="vashi-input different_shipping" id="billing:use_different" value="0">
+                                <label for="billing:use_different">Different from the billing address</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="address address--shipping address--disabled address--hidden">
+                <h1 class="address__title">Shipping Address</h1>
+                <!-- Shipping Address Form -->
+                <form>
+                    <div class="address__field-group">
+                        <div class="form-group">
+                            <label class="required" for="shipping:first">First Name<em>*</em></label>
+                            <div class="input-box input-firstname">
+                                <input placeholder="First Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="shipping[firstname]" id="shipping:firstname" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="shipping:lastname">Last Name<em>*</em></label>
+                            <div class="input-box input-lastname">
+                                <input placeholder="Last Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="shipping[lastname]" id="shipping:lastname" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="shipping:telephone">Telephone<em>*</em></label>
+                            <div class="input-box input-telephone">
+                                <input placeholder="Telephone" type="tel" name="shipping[telephone]" title="Please enter a phone number that we can contact you on, in case anything changes with your order" value="" class="vashi-input required-entry input-text" id="shipping:telephone">
+                            </div>
+                        </div>
+                        <div class="form-group address-detail required">
+                            <label class="required" for="shipping:street1">Address Line 1<em>*</em></label>
+                            <div class="input-box input-address-short">
+                                <input placeholder="Enter the first line of your shipping address" type="text" title="Please enter the first line of your address" name="shipping[street][]" id="shipping:street1" value="" class="required-entry input-text vashi-input onestepcheckout-address-line" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="gift-message">
+                <form>
+                    <div class="tabs">
+                        <div class="tabs__list">
+                            <a class="tab tab--active" href="#">Gift Message</a>
+                            <a class="tab" href="#">Special Instructions</a>
+                        </div>
+                        <div class="tab__content tab__content--active">
+                            <div class="form-group">
+                                <label class="required" for="from">From<em>*</em></label>
+                                <div class="input-box input-from">
+                                    <input placeholder="From" class="vashi-input required-entry input-text" type="text" title="From" name="from" id="from" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="required" for="to">To<em>*</em></label>
+                                <div class="input-box input-to">
+                                    <input placeholder="To" class="vashi-input required-entry input-text" type="text" title="To" name="to" id="to" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="required" for="gift-message">Gift Message<em>*</em></label>
+                                <div class="input-box input-gift-message">
+                                    <textarea placeholder="Message" class="vashi-input required-entry input-text" type="text" title="Gift Message" name="gift-message" id="gift-message" value=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content">
+                            <div class="form-group">
+                                <label class="required" for="special">Special Instructions<em>*</em></label>
+                                <div class="input-box input-special">
+                                    <textarea placeholder="Message" class="vashi-input required-entry input-text" type="text" title="Special Instructions" name="special-instructions" id="special-instructions" value=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="delivery-options">
+                <div class="delivery__toggle">
+                    <div class="input-box input-delivery-toggle">
+                        <input type="radio" name="shipping[delivery]" class="vashi-input different_shipping" id="shipping:free_delivery" value="1" checked="checked">
+                        <label for="shipping:free_delivery">Free delivery</label>
+                    </div>
+                    <div class="input-box input-delivery-toggle">
+                        <input type="radio" name="shipping[delivery]" class="vashi-input different_shipping" id="shipping:collection" value="0">
+                        <label for="shipping:collection">Free collection from one of our stores</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secure-payment">
+                <h1 class="secure-payment__title">Secure Payment</h1>
+                <div class="secure-payment__field-group">
+                    <div class="input-box input-delivery-toggle">
+                        <input type="radio" name="payment[pay]" class="vashi-input different_shipping" id="payment:bk" value="1" checked="checked">
+                        <label for="payment:bk">Bank Transfer</label>
+                    </div>
+                    <div class="input-box input-delivery-toggle">
+                        <input type="radio" name="payment[pay]" class="vashi-input different_shipping" id="payment:cc" value="0">
+                        <label for="payment:cc">Credit/Debit Card</label>
+                    </div>
+                    <div class="input-box input-delivery-toggle">
+                        <input type="radio" name="payment[pay]" class="vashi-input different_shipping" id="payment:finance" value="0">
+                        <label for="payment:finance">Apply for Finance</label>
+                    </div>
+                    <div class="input-box input-delivery-toggle">
+                        <input type="radio" name="payment[pay]" class="vashi-input different_shipping" id="payment:paypal" value="0">
+                        <label for="payment:paypal">PayPal</label>
+                    </div>
+                </div>
+            </section>
+
+            <input class="button" type="submit" value="Place Order Now">
+
+        </div>
+        <div class="loading-overlay">
+            <img src="images/loading.svg"/>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>

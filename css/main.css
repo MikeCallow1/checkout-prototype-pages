@@ -1,0 +1,499 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 1;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+@font-face {
+  font-family: 'Chap';
+  src: url('/fonts/Chap-Regular.eot'), url('/fonts/Chap-Regular.woff') format('woff'), url('/fonts/Chap-Regular.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/fonts/WorkSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'Advent Pro';
+  src: url('/fonts/AdventPro-Light.ttf');
+}
+header {
+  text-align: center;
+}
+header a {
+  margin-top: 2em;
+  width: 200px;
+  display: inline-block;
+}
+header img {
+  width: 100%;
+}
+#checkout {
+  margin: 2em auto;
+  max-width: 520px;
+}
+body {
+  background-color: #fcfcff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+#checkout {
+  font-family: 'Chap', sans-serif;
+  color: #252734;
+}
+.checkout__section {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+}
+.checkout__title {
+  font-size: 1.4em;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0.5em 1em 0.2em 1em;
+  border-bottom: 1px solid #e8e8e8;
+}
+.loading-overlay {
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  width: 0;
+  top: 0;
+  background: #d6daf3aa;
+  z-index: 3;
+  transition: 300ms opacity;
+}
+.loading-overlay img {
+  width: 64px;
+  height: 64px;
+}
+.loading-overlay--active {
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+}
+/**
+    Each checkout 'component' has its own folder.
+    This should hopefully make it easier to import the bits
+    we need for each 'component' in the actual checkout.
+*/
+/**
+    Basket
+        Item
+*/
+.basket {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+}
+.basket__title {
+  font-size: 1.4em;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0.5em 1em 0.2em 1em;
+  border-bottom: 1px solid #e8e8e8;
+}
+.item {
+  display: grid;
+  grid-template-areas: "image name name name" "image price price price" "image attributes attributes attributes";
+  font-family: 'Work Sans', sans-serif;
+  padding: 0.2em 1em;
+}
+.item:first-of-type {
+  padding-top: 1em;
+}
+.item__image {
+  width: 100px;
+  grid-area: image;
+}
+.item__image img {
+  width: 100%;
+}
+.item__name {
+  grid-area: name;
+  margin: 0;
+  font-size: 1.1em;
+}
+.item__price {
+  grid-area: price;
+  font-size: 0.9em;
+}
+.item__attributes {
+  grid-area: attributes;
+  font-size: 0.9em;
+}
+.item__attribute-value {
+  font-weight: bold;
+}
+.login {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+  padding: 1em 10%;
+}
+.address {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.address__title {
+  font-size: 1.4em;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0.5em 1em 0.2em 1em;
+  border-bottom: 1px solid #e8e8e8;
+}
+.address__field-group {
+  margin: 0 auto;
+  padding: 1em 10%;
+}
+.input-different-shipping {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-different-shipping input[type="radio"] {
+  width: auto;
+  height: 32px;
+}
+.input-different-shipping label {
+  padding-left: 2rem;
+}
+.address--disabled:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #e8e8e8aa;
+}
+.address--hidden {
+  height: 0;
+  overflow: hidden;
+}
+input {
+  background: white;
+  font-family: 'Work Sans', sans-serif;
+  color: #252734;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #252734;
+  box-shadow: none;
+  font-size: 1em;
+  height: 50px;
+  line-height: 40px;
+  margin: 10px 0;
+  padding: 0 10px;
+  transition: border-bottom-color 0.4s;
+  width: 100%;
+}
+.vashi-input {
+  box-sizing: border-box;
+  padding: 0 1em;
+}
+textarea.vashi-input {
+  border: 1px solid #252734;
+  width: 100%;
+  height: 140px;
+  resize: none;
+}
+textarea.vashi-input::placeholder {
+  text-align: center;
+  top: 50px;
+  position: relative;
+}
+.button {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background-color: #252734;
+  color: #fff;
+  padding: 0;
+  border: 0;
+  margin: 10px 0;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  min-width: 250px;
+  box-shadow: 0 64px 64px 0 rgba(58, 70, 92, 0.1), 0 32px 32px 0 rgba(58, 70, 92, 0.1), 0 16px 16px 0 rgba(58, 70, 92, 0.1), 0 8px 8px 0 rgba(58, 70, 92, 0.1);
+  -webkit-tap-highlight-color: transparent;
+  transition: box-shadow 0.4s, transform 0.4s;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.tabs {
+  position: relative;
+}
+.tabs__list {
+  display: flex;
+}
+.tab {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  color: #252734;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+.tab--active {
+  background: #fff;
+  border-bottom: none;
+}
+.tab:first-child {
+  border-right: none;
+}
+.tab__content {
+  display: none;
+  padding: 1em 10%;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  z-index: 1;
+  top: -1px;
+}
+.tab__content--active {
+  display: inherit;
+}
+.tab__content {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+}
+.delivery-options {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+  padding: 1em 10%;
+}
+.input-delivery-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-delivery-toggle input[type="radio"] {
+  width: auto;
+  height: 32px;
+}
+.input-delivery-toggle label {
+  padding-left: 2rem;
+}
+.secure-payment {
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 1px 4px #f6f6ff;
+  margin-bottom: 1rem;
+}
+.secure-payment__title {
+  font-size: 1.4em;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0.5em 1em 0.2em 1em;
+  border-bottom: 1px solid #e8e8e8;
+}
+.secure-payment__field-group {
+  padding: 1em 10%;
+}

@@ -313,13 +313,6 @@ h6 {
 .item__attribute-value {
   font-weight: bold;
 }
-.login {
-  background: white;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0px 1px 4px #f6f6ff;
-  margin-bottom: 1rem;
-  padding: 1em 10%;
-}
 .address {
   background: white;
   border: 1px solid #e8e8e8;
@@ -467,6 +460,8 @@ textarea.vashi-input::placeholder {
   border: 1px solid #e8e8e8;
   box-shadow: 0px 1px 4px #f6f6ff;
   margin-bottom: 1rem;
+}
+.delivery__toggle {
   padding: 1em 10%;
 }
 .input-delivery-toggle {

@@ -21,58 +21,32 @@ function () {
       console.log('Vashi Checkout Prototype');
       this.loadingOverlay = document.querySelector('.loading-overlay');
       this.addressToggles = document.querySelectorAll('.input-different-shipping input[type="radio"]');
-      this.bindLoginClick();
       this.bindAddressToggles();
       this.initTabs();
     }
   }, {
-    key: "bindLoginClick",
-    value: function bindLoginClick() {
-      var loginButton = document.querySelector('.login').querySelector('input[type="submit"]');
-      loginButton.addEventListener('click', this.handleLogin.bind(this));
-    }
-  }, {
-    key: "handleLogin",
-    value: function handleLogin(e) {
-      var _this = this;
-
-      e.preventDefault();
-      this.showLoadingSpinner();
-      this.timeout(1000).then(function () {
-        _this.hideLoadingSpinner();
-
-        _this.showBillingAddressSection();
-
-        _this.scrollToSection('.address--billing');
-      }).catch(function () {
-        _this.hideLoadingSpinner();
-
-        console.log('Login error');
-      });
-    }
-  }, {
     key: "bindAddressToggles",
     value: function bindAddressToggles() {
-      var _this2 = this;
+      var _this = this;
 
       this.addressToggles.forEach(function (radio) {
         radio.addEventListener('change', function (e) {
           if (e.target.id === 'billing:use_different') {
-            _this2.showLoadingSpinner();
+            _this.showLoadingSpinner();
 
-            _this2.timeout(1000).then(function () {
-              _this2.hideLoadingSpinner();
+            _this.timeout(1000).then(function () {
+              _this.hideLoadingSpinner();
 
-              _this2.showShippingAddressSection();
+              _this.showShippingAddressSection();
 
-              _this2.scrollToSection('.address--shipping');
+              _this.scrollToSection('.address--shipping');
             }).catch(function () {
-              _this2.hideLoadingSpinner();
+              _this.hideLoadingSpinner();
 
               console.log('Shipping address error');
             });
           } else {
-            _this2.hideShippingAddressSection();
+            _this.hideShippingAddressSection();
           }
         });
       });

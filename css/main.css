@@ -184,15 +184,15 @@ fieldset {
 }
 @font-face {
   font-family: 'Chap';
-  src: url('/fonts/Chap-Regular.eot'), url('/fonts/Chap-Regular.woff') format('woff'), url('/fonts/Chap-Regular.otf') format('truetype');
+  src: url('../fonts/Chap-Regular.eot'), url('../fonts/Chap-Regular.woff') format('woff'), url('../fonts/Chap-Regular.otf') format('truetype');
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('/fonts/WorkSans-Regular.ttf');
+  src: url('../fonts/WorkSans-Regular.ttf');
 }
 @font-face {
   font-family: 'Advent Pro';
-  src: url('/fonts/AdventPro-Light.ttf');
+  src: url('../fonts/AdventPro-Light.ttf');
 }
 header {
   text-align: center;

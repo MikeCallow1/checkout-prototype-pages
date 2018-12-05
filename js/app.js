@@ -12,6 +12,8 @@ function () {
   function VashiCheckout() {
     _classCallCheck(this, VashiCheckout);
 
+    this.loadingOverlay = document.querySelector('.loading-overlay');
+    this.addressToggles = document.querySelectorAll('.input-different-shipping input[type="radio"]');
     this.init();
   }
 
@@ -19,8 +21,6 @@ function () {
     key: "init",
     value: function init() {
       console.log('Vashi Checkout Prototype');
-      this.loadingOverlay = document.querySelector('.loading-overlay');
-      this.addressToggles = document.querySelectorAll('.input-different-shipping input[type="radio"]');
       this.bindAddressToggles();
       this.initTabs();
       this.bindPlaceOrder();

@@ -500,17 +500,18 @@ textarea.vashi-input::placeholder {
   padding: 1em;
   background: #f9f9f9;
   border: 1px solid #e8e8e8;
-  color: #252734;
+  color: #b7b7b7;
   text-decoration: none;
   position: relative;
   z-index: 2;
-  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   box-shadow: inset 0px -12px 14px -14px #cbcbd0;
 }
 .tab--active {
+  color: #252734;
   background: #fff;
   border-bottom: none;
-  box-shadow: none;
+  box-shadow: inset 0px 0px 14px -14px #cbcbd0;
 }
 .tab:first-child {
   border-right: none;
@@ -520,13 +521,14 @@ textarea.vashi-input::placeholder {
   padding: 1em 10%;
   border: 1px solid #e8e8e8;
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: -1px;
 }
 .tab__content--active {
   position: relative;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
+  z-index: 1;
 }
 .tab__content {
   background: white;

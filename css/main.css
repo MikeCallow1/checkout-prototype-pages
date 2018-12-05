@@ -363,13 +363,15 @@ h6 {
 .input-box input[type="text"],
 .input-box input[type="email"],
 .input-box input[type="number"],
-.input-box input[type="tel"] {
+.input-box input[type="tel"],
+.input-box textarea {
   transition: border-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 .input-box input[type="text"] + label,
 .input-box input[type="email"] + label,
 .input-box input[type="number"] + label,
-.input-box input[type="tel"] + label {
+.input-box input[type="tel"] + label,
+.input-box textarea + label {
   font-size: 14px;
   position: absolute;
   margin-left: 1.2em;
@@ -385,38 +387,46 @@ h6 {
 .input-box input[type="email"].has-value,
 .input-box input[type="number"].has-value,
 .input-box input[type="tel"].has-value,
+.input-box textarea.has-value,
 .input-box input[type="text"]:-webkit-autofill,
 .input-box input[type="email"]:-webkit-autofill,
 .input-box input[type="number"]:-webkit-autofill,
-.input-box input[type="tel"]:-webkit-autofill {
+.input-box input[type="tel"]:-webkit-autofill,
+.input-box textarea:-webkit-autofill {
   color: #777;
 }
 .input-box input[type="text"]:focus,
 .input-box input[type="email"]:focus,
 .input-box input[type="number"]:focus,
 .input-box input[type="tel"]:focus,
+.input-box textarea:focus,
 .input-box input[type="text"].has-value,
 .input-box input[type="email"].has-value,
 .input-box input[type="number"].has-value,
 .input-box input[type="tel"].has-value,
+.input-box textarea.has-value,
 .input-box input[type="text"]:-webkit-autofill,
 .input-box input[type="email"]:-webkit-autofill,
 .input-box input[type="number"]:-webkit-autofill,
-.input-box input[type="tel"]:-webkit-autofill {
+.input-box input[type="tel"]:-webkit-autofill,
+.input-box textarea:-webkit-autofill {
   border-color: #777;
 }
 .input-box input[type="text"]:focus + label,
 .input-box input[type="email"]:focus + label,
 .input-box input[type="number"]:focus + label,
 .input-box input[type="tel"]:focus + label,
+.input-box textarea:focus + label,
 .input-box input[type="text"].has-value + label,
 .input-box input[type="email"].has-value + label,
 .input-box input[type="number"].has-value + label,
 .input-box input[type="tel"].has-value + label,
+.input-box textarea.has-value + label,
 .input-box input[type="text"]:-webkit-autofill + label,
 .input-box input[type="email"]:-webkit-autofill + label,
 .input-box input[type="number"]:-webkit-autofill + label,
-.input-box input[type="tel"]:-webkit-autofill + label {
+.input-box input[type="tel"]:-webkit-autofill + label,
+.input-box textarea:-webkit-autofill + label {
   transform: translateY(0);
   color: #777;
 }
@@ -494,24 +504,29 @@ textarea.vashi-input::placeholder {
   text-decoration: none;
   position: relative;
   z-index: 2;
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  box-shadow: inset 0px -12px 14px -14px #cbcbd0;
 }
 .tab--active {
   background: #fff;
   border-bottom: none;
+  box-shadow: none;
 }
 .tab:first-child {
   border-right: none;
 }
 .tab__content {
-  display: none;
+  opacity: 0;
   padding: 1em 10%;
   border: 1px solid #e8e8e8;
-  position: relative;
+  position: absolute;
   z-index: 1;
   top: -1px;
 }
 .tab__content--active {
-  display: inherit;
+  position: relative;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 .tab__content {
   background: white;

@@ -29,7 +29,7 @@ function () {
   }, {
     key: "initFancyFields",
     value: function initFancyFields() {
-      var fields = document.querySelectorAll('input.vashi-input');
+      var fields = document.querySelectorAll('.vashi-input');
       var _iteratorNormalCompletion = true;
       var _didIteratorError = false;
       var _iteratorError = undefined;

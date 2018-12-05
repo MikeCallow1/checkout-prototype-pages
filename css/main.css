@@ -360,6 +360,12 @@ h6 {
 .input-box {
   position: relative;
 }
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box input[type="number"],
+.input-box input[type="tel"] {
+  transition: border-color 300ms ease-in-out, color 300ms ease-in-out;
+}
 .input-box input[type="text"] + label,
 .input-box input[type="email"] + label,
 .input-box input[type="number"] + label,
@@ -371,9 +377,33 @@ h6 {
   background: white;
   top: 0;
   transform: translateY(25px);
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
   z-index: 1;
   pointer-events: none;
+}
+.input-box input[type="text"].has-value,
+.input-box input[type="email"].has-value,
+.input-box input[type="number"].has-value,
+.input-box input[type="tel"].has-value,
+.input-box input[type="text"]:-webkit-autofill,
+.input-box input[type="email"]:-webkit-autofill,
+.input-box input[type="number"]:-webkit-autofill,
+.input-box input[type="tel"]:-webkit-autofill {
+  color: #777;
+}
+.input-box input[type="text"]:focus,
+.input-box input[type="email"]:focus,
+.input-box input[type="number"]:focus,
+.input-box input[type="tel"]:focus,
+.input-box input[type="text"].has-value,
+.input-box input[type="email"].has-value,
+.input-box input[type="number"].has-value,
+.input-box input[type="tel"].has-value,
+.input-box input[type="text"]:-webkit-autofill,
+.input-box input[type="email"]:-webkit-autofill,
+.input-box input[type="number"]:-webkit-autofill,
+.input-box input[type="tel"]:-webkit-autofill {
+  border-color: #777;
 }
 .input-box input[type="text"]:focus + label,
 .input-box input[type="email"]:focus + label,
@@ -382,8 +412,13 @@ h6 {
 .input-box input[type="text"].has-value + label,
 .input-box input[type="email"].has-value + label,
 .input-box input[type="number"].has-value + label,
-.input-box input[type="tel"].has-value + label {
+.input-box input[type="tel"].has-value + label,
+.input-box input[type="text"]:-webkit-autofill + label,
+.input-box input[type="email"]:-webkit-autofill + label,
+.input-box input[type="number"]:-webkit-autofill + label,
+.input-box input[type="tel"]:-webkit-autofill + label {
   transform: translateY(0);
+  color: #777;
 }
 input {
   background: white;

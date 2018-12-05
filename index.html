@@ -45,39 +45,39 @@
                 </div>
             </section>
 
-            <section class="address address--billing" tabindex="-1">
+            <section class="address address--billing">
                 <h1 class="address__title">Billing Address</h1>
                 <!-- Billing Address Form -->
                 <form>
                     <div class="address__field-group">
-                        <label class="required" for="email">Email Address<em>*</em></label>
                         <div class="form-group">
                             <div class="input-box input-email">
-                                <input placeholder="Email address" type="email" name="billing[email]" title="Please enter your e-mail address so we can confirm your order" id="billing:email" value="" class="vashi-input validate-email required-entry input-text">
+                                <input type="email" name="billing[email]" title="Please enter your e-mail address so we can confirm your order" id="billing:email" value="" class="vashi-input validate-email required-entry input-text">
+                                <label class="required" for="email">Email Address<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="required" for="billing:first">First Name<em>*</em></label>
                             <div class="input-box input-firstname">
-                                <input placeholder="First Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="billing[firstname]" id="billing:firstname" value="">
+                                <input class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="billing[firstname]" id="billing:firstname" value="">
+                                <label class="required" for="billing:first">First Name<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="required" for="billing:lastname">Last Name<em>*</em></label>
                             <div class="input-box input-lastname">
-                                <input placeholder="Last Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="billing[lastname]" id="billing:lastname" value="">
+                                <input class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="billing[lastname]" id="billing:lastname" value="">
+                                <label class="required" for="billing:lastname">Last Name<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="required" for="billing:telephone">Telephone<em>*</em></label>
                             <div class="input-box input-telephone">
-                                <input placeholder="Telephone" type="tel" name="billing[telephone]" title="Please enter a phone number that we can contact you on, in case anything changes with your order" value="" class="vashi-input required-entry input-text" id="billing:telephone">
+                                <input type="tel" name="billing[telephone]" title="Please enter a phone number that we can contact you on, in case anything changes with your order" value="" class="vashi-input required-entry input-text" id="billing:telephone">
+                                <label class="required" for="billing:telephone">Telephone<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group address-detail required">
-                            <label class="required" for="billing:street1">Address Line 1<em>*</em></label>
                             <div class="input-box input-address-short">
-                                <input placeholder="Enter the first line of your billing address" type="text" title="Please enter the first line of your address" name="billing[street][]" id="billing:street1" value="" class="required-entry input-text vashi-input onestepcheckout-address-line" autocomplete="off">
+                                <input type="text" title="Please enter the first line of your address" name="billing[street][]" id="billing:street1" value="" class="required-entry input-text vashi-input onestepcheckout-address-line" autocomplete="off">
+                                <label class="required" for="billing:street1">Address Line 1<em>*</em></label>
                             </div>
                         </div>
                         <div class="address__toggle">
@@ -100,27 +100,27 @@
                 <form>
                     <div class="address__field-group">
                         <div class="form-group">
-                            <label class="required" for="shipping:first">First Name<em>*</em></label>
                             <div class="input-box input-firstname">
-                                <input placeholder="First Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="shipping[firstname]" id="shipping:firstname" value="">
+                                <input class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="shipping[firstname]" id="shipping:firstname" value="">
+                                <label class="required" for="shipping:first">First Name<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="required" for="shipping:lastname">Last Name<em>*</em></label>
                             <div class="input-box input-lastname">
-                                <input placeholder="Last Name" class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="shipping[lastname]" id="shipping:lastname" value="">
+                                <input class="vashi-input required-entry input-text" type="text" title="Please supply your last name" name="shipping[lastname]" id="shipping:lastname" value="">
+                                <label class="required" for="shipping:lastname">Last Name<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="required" for="shipping:telephone">Telephone<em>*</em></label>
                             <div class="input-box input-telephone">
-                                <input placeholder="Telephone" type="tel" name="shipping[telephone]" title="Please enter a phone number that we can contact you on, in case anything changes with your order" value="" class="vashi-input required-entry input-text" id="shipping:telephone">
+                                <input type="tel" name="shipping[telephone]" title="Please enter a phone number that we can contact you on, in case anything changes with your order" value="" class="vashi-input required-entry input-text" id="shipping:telephone">
+                                <label class="required" for="shipping:telephone">Telephone<em>*</em></label>
                             </div>
                         </div>
                         <div class="form-group address-detail required">
-                            <label class="required" for="shipping:street1">Address Line 1<em>*</em></label>
                             <div class="input-box input-address-short">
-                                <input placeholder="Enter the first line of your shipping address" type="text" title="Please enter the first line of your address" name="shipping[street][]" id="shipping:street1" value="" class="required-entry input-text vashi-input onestepcheckout-address-line" autocomplete="off">
+                                <input type="text" title="Please enter the first line of your address" name="shipping[street][]" id="shipping:street1" value="" class="required-entry input-text vashi-input onestepcheckout-address-line" autocomplete="off">
+                                <label class="required" for="shipping:street1">Address Line 1<em>*</em></label>
                             </div>
                         </div>
                     </div>
@@ -136,29 +136,29 @@
                         </div>
                         <div class="tab__content tab__content--active">
                             <div class="form-group">
-                                <label class="required" for="from">From<em>*</em></label>
                                 <div class="input-box input-from">
-                                    <input placeholder="From" class="vashi-input required-entry input-text" type="text" title="From" name="from" id="from" value="">
+                                    <input class="vashi-input required-entry input-text" type="text" title="From" name="from" id="from" value="">
+                                    <label class="required" for="from">From<em>*</em></label>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="required" for="to">To<em>*</em></label>
                                 <div class="input-box input-to">
-                                    <input placeholder="To" class="vashi-input required-entry input-text" type="text" title="To" name="to" id="to" value="">
+                                    <input class="vashi-input required-entry input-text" type="text" title="To" name="to" id="to" value="">
+                                    <label class="required" for="to">To<em>*</em></label>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="required" for="gift-message">Gift Message<em>*</em></label>
                                 <div class="input-box input-gift-message">
+                                    <label class="required" for="gift-message">Gift Message<em>*</em></label>
                                     <textarea placeholder="Message" class="vashi-input required-entry input-text" type="text" title="Gift Message" name="gift-message" id="gift-message" value=""></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="tab__content">
                             <div class="form-group">
-                                <label class="required" for="special">Special Instructions<em>*</em></label>
                                 <div class="input-box input-special">
-                                    <textarea placeholder="Message" class="vashi-input required-entry input-text" type="text" title="Special Instructions" name="special-instructions" id="special-instructions" value=""></textarea>
+                                    <label class="required" for="special">Special Instructions<em>*</em></label>
+                                    <textarea class="vashi-input required-entry input-text" type="text" title="Special Instructions" name="special-instructions" id="special-instructions" value=""></textarea>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@
                 </div>
             </section>
 
-            <input class="button" type="submit" value="Place Order Now">
+            <input class="button place-order" type="submit" value="Place Order Now">
 
         </div>
         <div class="loading-overlay">

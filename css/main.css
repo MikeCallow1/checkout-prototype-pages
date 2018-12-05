@@ -357,6 +357,33 @@ h6 {
   height: 0;
   overflow: hidden;
 }
+.input-box {
+  position: relative;
+}
+.input-box input[type="text"] + label,
+.input-box input[type="email"] + label,
+.input-box input[type="number"] + label,
+.input-box input[type="tel"] + label {
+  font-size: 14px;
+  position: absolute;
+  margin-left: 1.2em;
+  padding: 0 0.3em;
+  background: white;
+  top: 0;
+  transform: translateY(25px);
+  transition: transform 300ms ease-in-out;
+  z-index: 1;
+}
+.input-box input[type="text"]:focus + label,
+.input-box input[type="email"]:focus + label,
+.input-box input[type="number"]:focus + label,
+.input-box input[type="tel"]:focus + label,
+.input-box input[type="text"].has-value + label,
+.input-box input[type="email"].has-value + label,
+.input-box input[type="number"].has-value + label,
+.input-box input[type="tel"].has-value + label {
+  transform: translateY(0);
+}
 input {
   background: white;
   font-family: 'Work Sans', sans-serif;
@@ -372,6 +399,7 @@ input {
   padding: 0 10px;
   transition: border-bottom-color 0.4s;
   width: 100%;
+  outline: none;
 }
 .vashi-input {
   box-sizing: border-box;

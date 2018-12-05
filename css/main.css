@@ -373,6 +373,7 @@ h6 {
   transform: translateY(25px);
   transition: transform 300ms ease-in-out;
   z-index: 1;
+  pointer-events: none;
 }
 .input-box input[type="text"]:focus + label,
 .input-box input[type="email"]:focus + label,
